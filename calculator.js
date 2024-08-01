@@ -55,7 +55,8 @@ r1.question("Name: ", (name) => {
                             console.log(`Result is : ${div}`);
                         }
                     }
-                })
+                    r1.close();
+                });
             })
         })
 
