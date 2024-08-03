@@ -20,10 +20,12 @@ r1.question("Name: ", (name) => {
 
         //First we will get the  values on which operation is needed to be performed
         r1.question("Value 1: ", (val1) => {
+            const num1 = parseFloat(val1);
             //Now we will ask the second value 
             r1.question("Value 2: ", (val2) => {
-                console.log(`Value 1 you entered is : ${val1}`);
-                console.log(`Value 2 you entered is : ${val2}`);
+                const num2 = parseFloat(val2);
+                console.log(`Value 1 you entered is : ${num1}`);
+                console.log(`Value 2 you entered is : ${num2}`);
 
                 //Now we will describe the keys to trigger operations
                 console.log("Addition       : A/a");
@@ -36,22 +38,22 @@ r1.question("Name: ", (name) => {
                     //Now we will declare if statements
                     if (op == 'A' || op == 'a') {
                         var sum = 0;
-                        sum = val1 + val2;
+                        sum = num1 + num2;
                         console.log(`Sum: ${sum}`);
                     } else if (op == 'S' || op == 's') {
                         var diff = 0;
-                        diff = val1 - val2;
+                        diff = num1 - num2;
                         console.log(`Difference is: ${diff}`);
                     } else if (op == 'M' || op == 'm') {
                         var pro = 0;
-                        pro = val1 * val2;
+                        pro = num1 * num2;
                         console.log(`Product is: ${pro}`);
                     } else if (op == 'D' || op == 'd') {
-                        if (val2 == 0) {
+                        if (num2 == 0) {
                             console.log("Cannot divide with zero");
                         } else {
                             var div = 0;
-                            div = val1 / val2;
+                            div = num1 / num2;
                             console.log(`Result is : ${div}`);
                         }
                     }
